@@ -1,0 +1,19 @@
+---
+title: "CodeBook"
+output: html_document
+
+# **Introduction**
+The script run_analysis.R performs the 5 steps outlined by the course project.
+
+First, all relevant data is merged using the rbind() function. 
+Next, only those columns with the mean and standard deviation measurements are taken from the dataset. Once we extract these columns, they are labelled correctly using names from the features.txt file.
+Then we use the activity categories 1:6 to assign a new group to the data so we group by activity later on.
+Any columns names that are not clearly defined are cleaned up.
+Finally, we generate a new dataset with all the average measures for each subjectand activity type (30 subjects * 6 activities = 180 rows). The output file is called FinalData.txt, and uploaded to this repository.
+
+## **
+x_train, y_train, x_test, y_test, subject_train and subject_test contain the data from the downloaded files.
+X, Y and Subject merge the previous datasets to further analysis.
+features contains the correct names for the Merged_data dataset, which are applied to the column names stored in mean_and_std_features.
+The same approach is taken with activity names through the activities variable.
+Merged_data merges X, Y and Subject in a big dataset.
